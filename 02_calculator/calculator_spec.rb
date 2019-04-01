@@ -35,6 +35,38 @@
 
 require "calculator"
 
+def add(x, y)
+  x + y
+end
+
+def subtract(x, y)
+  x - y
+end
+
+def sum(arr)
+  result = 0
+  arr.each do |i|
+    result += i
+  end
+  return result
+end
+
+def multiply(x, y)
+  x * y
+end
+
+def power(x, y)
+  x ** y
+end
+
+def factorial(n)
+  if n == 0 or n == 1
+    return 1
+  else
+    return n * factorial(n - 1)
+  end
+end
+
 describe "add" do
   it "adds 0 and 0" do
     expect(add(0,0)).to eq(0)
@@ -77,23 +109,33 @@ end
 # once the above tests pass,
 # write tests and code for the following:
 
-describe "#multiply" do
-
-  it "multiplies two numbers"
-
-  it "multiplies several numbers"
-  
+describe "multiply" do
+  it "multiplies two numbers" do
+    expect(multiply(2,2)).to eq(4)
+  end
 end
 
-describe "#power" do
-  it "raises one number to the power of another number"
+describe "power" do
+  it "raises one number to the power of another number" do
+    expect(power(2,3)).to eq(8)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
-describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+describe "factorial" do
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end
 end
