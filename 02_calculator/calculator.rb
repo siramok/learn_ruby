@@ -25,6 +25,7 @@ def multiplyArray(arr)
     end
     return result
 end
+
 def power(x, y)
     x ** y
 end
