@@ -81,6 +81,9 @@ describe "multiply" do
   it "multiplies two numbers" do
     expect(multiply(2,2)).to eq(4)
   end
+  it "multiplies several numbers" do
+    expect(multiplyArray([4,7,2])).to eq(56)
+  end
 end
 
 describe "power" do

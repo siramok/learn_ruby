@@ -17,7 +17,14 @@ end
 def multiply(x, y)
     x * y
 end
-  
+
+def multiplyArray(arr)
+    result = 1
+    arr.each do |i|
+        result *= i
+    end
+    return result
+end
 def power(x, y)
     x ** y
 end
